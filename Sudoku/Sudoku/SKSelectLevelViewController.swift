@@ -20,7 +20,7 @@ class SKSelectLevelViewController: SKBaseViewController {
         pv.isHidden = true
         let label1 = UILabel()
         label1.textColor = SK_TINTCOLOR
-        label1.text = "这是一个需要脑子的游戏！"
+        label1.text = "一个益智小游戏！"
         label1.font = UIFont.systemFont(ofSize: 20.0)
         pv.addSubview(label1)
         label1.snp.makeConstraints({ (make) in
@@ -30,7 +30,7 @@ class SKSelectLevelViewController: SKBaseViewController {
         
         let label2 = UILabel()
         label2.textColor = SK_TINTCOLOR
-        label2.text = "你有脑子吗？"
+        label2.text = "快来试试吧！"
         label2.font = UIFont.systemFont(ofSize: 20.0)
         pv.addSubview(label2)
         label2.snp.makeConstraints({ (make) in
