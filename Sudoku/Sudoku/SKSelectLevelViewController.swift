@@ -134,7 +134,7 @@ class SKSelectLevelViewController: SKBaseViewController {
         view.addSubview(placeView)
         
         segmentControl.snp.makeConstraints { [unowned self](make) in
-            make.top.equalTo(self.view).offset(SK_NAVIGATION_HEIGHT + 20)
+            make.top.equalTo(self.navigationView.snp_bottom).offset(20)
             make.width.equalTo(210)
             make.height.equalTo(210 / 6)
             make.centerX.equalTo(self.view)
@@ -146,7 +146,7 @@ class SKSelectLevelViewController: SKBaseViewController {
         }
         
         startGameButton.snp.makeConstraints { [unowned self](make) in
-            make.bottom.equalTo(self.view.snp.bottom).offset(-30)
+            make.bottom.equalTo(self.view.snp.bottom).offset(-34)
             make.width.equalTo(210)
             make.height.equalTo(42)
             make.centerX.equalTo(self.view)

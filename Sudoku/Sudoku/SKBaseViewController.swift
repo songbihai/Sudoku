@@ -20,6 +20,12 @@ class SKBaseViewController: UIViewController {
         return label
     }()
     
+    var navigationView: UIView = {
+        let navigation = UIView()
+        navigation.backgroundColor = SK_TINTCOLOR
+        return navigation
+    }()
+    
     override var prefersStatusBarHidden: Bool {
         return false
     }
@@ -33,8 +39,7 @@ class SKBaseViewController: UIViewController {
 
         navigationController?.setNavigationBarHidden(true, animated: false)
         
-        let navigationView = UIView()
-        navigationView.backgroundColor = SK_TINTCOLOR
+        
         view.addSubview(navigationView)
         
         view.backgroundColor = UIColor.white
@@ -42,11 +47,15 @@ class SKBaseViewController: UIViewController {
         
         navigationView.snp.makeConstraints { (make) in
             make.top.left.right.equalTo(self.view)
-            make.height.equalTo(SK_NAVIGATION_HEIGHT)
+            if IS_PHONEX {
+                make.height.equalTo(SK_NAVIGATION_HEIGHT + 22)
+            }else {
+                make.height.equalTo(SK_NAVIGATION_HEIGHT)
+            }
         }
         
         titleLabel.snp.makeConstraints { (make) in
-            make.centerY.equalTo(navigationView).offset(10)
+            make.centerY.equalTo(navigationView).offset(IS_PHONEX ? 22 : 10)
             make.centerX.equalTo(navigationView)
         }
         

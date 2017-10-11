@@ -57,7 +57,7 @@ class SKGameViewController: SKBaseViewController {
     }()
     
     private var rubberButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: (SK_SCREEN_WIDTH - 120) / 4 * 3 + 80, y: SK_SCREEN_HEIGHT - 70, width: 40, height: 40))
+        let button = UIButton(frame: CGRect(x: (SK_SCREEN_WIDTH - 120) / 4 * 3 + 80, y: SK_SCREEN_HEIGHT - 74, width: 40, height: 40))
         button.backgroundColor = UIColor.white
         button.setBackgroundImage(UIImage.init(named: "橡皮擦"), for: .normal)
         return button
@@ -141,7 +141,7 @@ class SKGameViewController: SKBaseViewController {
             })
         }else {
             gameView.snp.makeConstraints({ [unowned self](make) in
-                make.top.equalTo(self.view).offset(SK_NAVIGATION_HEIGHT + 80)
+                make.top.equalTo(self.navigationView.snp.bottom).offset(80)
                 make.left.right.equalTo(self.view)
                 make.height.equalTo(SK_SCREEN_WIDTH)
             })
@@ -150,7 +150,7 @@ class SKGameViewController: SKBaseViewController {
         backButton.snp.makeConstraints { [unowned self](make) in
             make.left.equalTo(self.view).offset(5)
             make.width.height.equalTo(SK_NAVIGATIONBAR_HEIGHT)
-            make.top.equalTo(self.view).offset(20)
+            make.centerY.equalTo(self.navigationView).offset(IS_PHONEX ? 22 : 10)
         }
         
         timeLabel.snp.makeConstraints { [unowned self](make) in
@@ -159,7 +159,7 @@ class SKGameViewController: SKBaseViewController {
         }
         
         fewTimesLabel.snp.makeConstraints { [unowned self](make) in
-            make.top.equalTo(self.view).offset(SK_NAVIGATION_HEIGHT + 20)
+            make.top.equalTo(self.navigationView.snp.bottom).offset(20)
             make.centerX.equalTo(self.view)
         }
         

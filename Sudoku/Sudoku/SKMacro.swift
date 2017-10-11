@@ -28,6 +28,10 @@ let IS_PAD: Bool = {
     return UIDevice.current.userInterfaceIdiom == .pad
 }()
 
+let IS_PHONEX: Bool = {
+    return UIScreen.main.bounds.height == 812
+}()
+
 
 let SK_NAVIGATIONBAR_HEIGHT: CGFloat = 44
 
@@ -42,6 +46,8 @@ let SK_EASY_TIMES: String = "SK_EASY_TIMES"
 let SK_MID_TIMES: String = "SK_MID_TIMES"
 
 let SK_HARD_TIMES: String = "SK_HARD_TIMES"
+
+
 
 extension UIColor {
     
