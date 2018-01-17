@@ -124,6 +124,11 @@ class SKGameViewController: SKBaseViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let popupView = SKSurePopupView.show(title: "你真棒!!!", detailText: "留下你的大名吧", leftText: "返回", rightText: "继续", animated: true)
+    }
+    
     private func addAllSubviews() {
         view.addSubview(backButton)
         view.addSubview(gameView)

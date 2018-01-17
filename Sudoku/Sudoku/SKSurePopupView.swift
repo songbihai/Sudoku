@@ -45,7 +45,11 @@ class SKSurePopupView: UIControl {
     
     
     private func showOnLastWindow(animated: Bool) {
-        if let v = UIApplication.shared.windows.first {
+        //last window的hidden会为YES
+        if let w = UIApplication.shared.windows.last {
+            print(w, UIApplication.shared.windows)
+        }
+        if let v = UIApplication.shared.keyWindow {
             frame = v.bounds
             v.addSubview(self)
             if animated {
