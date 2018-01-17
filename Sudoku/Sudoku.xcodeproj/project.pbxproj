@@ -220,7 +220,8 @@
 				TargetAttributes = {
 					2D0CD3131F25F82B003FE537 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7R5H7SFDCY;
+						DevelopmentTeam = 2J386KRBA4;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					2D0CD32A1F25F82C003FE537 = {
@@ -514,12 +515,14 @@
 			baseConfigurationReference = 5DC9056EF72AF762441A276F /* Pods-Sudoku.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7R5H7SFDCY;
+				DEVELOPMENT_TEAM = 2J386KRBA4;
 				INFOPLIST_FILE = Sudoku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SBH.Sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -528,12 +531,14 @@
 			baseConfigurationReference = 936B45D79B985BE33C019BA4 /* Pods-Sudoku.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7R5H7SFDCY;
+				DEVELOPMENT_TEAM = 2J386KRBA4;
 				INFOPLIST_FILE = Sudoku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SBH.Sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -45,7 +45,7 @@ class SKSurePopupView: UIControl {
     
     
     private func showOnLastWindow(animated: Bool) {
-        if let v = UIApplication.shared.windows.last {
+        if let v = UIApplication.shared.windows.first {
             frame = v.bounds
             v.addSubview(self)
             if animated {
@@ -76,14 +76,12 @@ class SKSurePopupView: UIControl {
         self.animated = animated
         addAllSubviews()
         backgroundColor = UIColor(hex: 0x000000).withAlphaComponent(0.5)
-
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addAllSubviews()
         backgroundColor = UIColor(hex: 0x000000).withAlphaComponent(0.5)
-
     }
     
     private func addAllSubviews() {

@@ -42,7 +42,7 @@ class SKSelectLevelViewController: SKBaseViewController {
     
     private var segmentControl: UISegmentedControl = {
         let segment = UISegmentedControl()
-        segment.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 16.0)], for: .normal)
+        segment.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .normal)
         segment.insertSegment(withTitle: "简单", at: 0, animated: false)
         segment.insertSegment(withTitle: "一般", at: 1, animated: false)
         segment.insertSegment(withTitle: "困难", at: 2, animated: false)
@@ -134,7 +134,7 @@ class SKSelectLevelViewController: SKBaseViewController {
         view.addSubview(placeView)
         
         segmentControl.snp.makeConstraints { [unowned self](make) in
-            make.top.equalTo(self.navigationView.snp_bottom).offset(20)
+            make.top.equalTo(self.navigationView.snp.bottom).offset(20)
             make.width.equalTo(210)
             make.height.equalTo(210 / 6)
             make.centerX.equalTo(self.view)

@@ -75,7 +75,7 @@ extension Timer {
             self, selector: #selector(Timer.sb_blcokInvoke(timer:)), userInfo: Block(block), repeats: repeats)
     }
     
-    static func sb_blcokInvoke(timer: Timer) {
+    @objc static func sb_blcokInvoke(timer: Timer) {
         if let block = timer.userInfo as? Block<()->()> {
             block.f()
         }
