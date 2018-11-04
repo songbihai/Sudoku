@@ -64,13 +64,13 @@ extension UIColor {
 }
 
 
-private class Block<T> {
+fileprivate class Block<T> {
     let f : T
     init (_ f: T) { self.f = f }
 }
 
 extension Timer {
-    static func sb_scheduledTimerWithTimeInterval(ti: TimeInterval, block: ()->(), repeats: Bool) -> Timer {
+    static func sb_scheduledTimerWithTimeInterval(ti: TimeInterval, block: @escaping ()->(), repeats: Bool) -> Timer {
         return self.scheduledTimer(timeInterval: ti, target:
             self, selector: #selector(Timer.sb_blcokInvoke(timer:)), userInfo: Block(block), repeats: repeats)
     }
