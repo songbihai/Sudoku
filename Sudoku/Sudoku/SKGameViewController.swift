@@ -338,7 +338,7 @@ extension SKGameViewController: SKGameViewDelegate {
         let popupView = SKSurePopupView.show(title: "你真棒!!!", detailText: "留下你的大名吧", leftText: "返回", rightText: "继续", animated: true)
         
         popupView.leftRightAction(left: {
-            if let tf = popupView.nameTextField, let name = tf.text, name.characters.count > 0 {
+            if let tf = popupView.nameTextField, let name = tf.text, name.count > 0 {
                 if let time = self.timeLabel.text {
                     SKCoredataManager.share.addOneRankEntity(level: key, name: name, time: time, seconds: Int64(self.count))
                 }
@@ -351,7 +351,7 @@ extension SKGameViewController: SKGameViewDelegate {
             self.navigationController?.popViewController(animated: true)
         }) {
             
-            if let tf = popupView.nameTextField, let name = tf.text, name.characters.count > 0 {
+            if let tf = popupView.nameTextField, let name = tf.text, name.count > 0 {
                 if let time = self.timeLabel.text {
                     SKCoredataManager.share.addOneRankEntity(level: key, name: name, time: time, seconds: Int64(self.count))
                 }

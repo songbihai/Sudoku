@@ -100,7 +100,7 @@ class SKSurePopupView: UIControl {
             make.width.equalTo(270)
         }
         
-        if let t = title, t.characters.count > 0 {
+        if let t = title, t.count > 0 {
             titleLabel = UILabel()
             titleLabel?.textColor = UIColor(hex: 0x333333)
             titleLabel?.font = UIFont.systemFont(ofSize: 16)
@@ -111,7 +111,7 @@ class SKSurePopupView: UIControl {
             }
         }
         
-        if let d = detailText, d.characters.count > 0 {
+        if let d = detailText, d.count > 0 {
             nameTextField = UITextField()
             nameTextField?.textAlignment = .center
             nameTextField?.borderStyle = .roundedRect
@@ -179,13 +179,13 @@ class SKSurePopupView: UIControl {
         }
         titleLabel?.text = title
         nameTextField?.placeholder = detailText
-        if leftText != nil && leftText.characters.count > 0 {
+        if leftText != nil && leftText.count > 0 {
             cancelBtn.setTitle(leftText, for: .normal)
         }else {
             cancelBtn.setTitle("取消", for: .normal)
         }
         
-        if rightText != nil && rightText.characters.count > 0 {
+        if rightText != nil && rightText.count > 0 {
             sureBtn.setTitle(rightText, for: .normal)
         }else {
             sureBtn.setTitle("确定", for: .normal)

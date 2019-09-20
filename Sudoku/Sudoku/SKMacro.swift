@@ -29,7 +29,10 @@ let IS_PAD: Bool = {
 }()
 
 let IS_PHONEX: Bool = {
-    return UIScreen.main.bounds.height == 812
+    guard #available(iOS 11.0, *) else {
+        return false
+    }
+    return UIApplication.shared.windows[0].safeAreaInsets != UIEdgeInsets.zero
 }()
 
 
